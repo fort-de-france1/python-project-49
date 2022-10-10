@@ -2,17 +2,12 @@ import random
 import prompt
 
 
+
 def welcome_user():
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}")
     return name
-
-
-def rand_num():
-    num1 = random.randint(1, 100)
-    num2 = random.randint(1, 100)
-    return (num1, num2)
 
 
 def sum(num):
@@ -31,6 +26,12 @@ def multi(num):
     print(f"Question: {num[0]} * {num[1]}")
     answer_multi = num[0] * num[1]
     return answer_multi
+
+
+def rand_num():
+    num1 = random.randint(1, 100)
+    num2 = random.randint(1, 100)
+    return (num1, num2)
 
 
 def is_correct(answer, name):
@@ -53,7 +54,7 @@ def main():
         answer = ran_opr(numbers)
         t_or_f = is_correct(answer, name)
         if t_or_f:
-            print("+1")
+            count += 1
         else:
             break
     if count == 3:
