@@ -27,7 +27,7 @@ def is_correct(answer, name):
 def main():
     name = welcome_user()
     count = 0
-    print("'yes' if the number is even, otherwise answer 'no''.")
+    print('"yes" if the number is even, otherwise answer "no".')
     while count < 3:
         num = random.randint(1, 100)
         answer = is_even(num)
