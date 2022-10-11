@@ -8,6 +8,7 @@ def progression():
     ran_idx = random.randint(0, 9)
     answer = prog_list[ran_idx]
     prog_list[ran_idx] = ".."
+    print("Question:", end=" ")
     for i in prog_list:
         print(i, end=" ")
     print()
