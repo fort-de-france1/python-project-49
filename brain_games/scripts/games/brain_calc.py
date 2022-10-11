@@ -23,6 +23,7 @@ def multi(num):
 def main():
     name = welcome_user()
     count = 0
+    print("What is the result of the expression?")
     while count < 3:
         numbers = rand_num()
         ran_opr = random.choice((sum, minus, multi))

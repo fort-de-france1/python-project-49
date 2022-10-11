@@ -33,7 +33,7 @@ def is_correct(answer, name):
 def main():
     name = welcome_user()
     count = 0
-    print("Answer 'yes' if given number is prime. Otherwise answer 'no''.")
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     while count < 3:
 
         answer = prime()
