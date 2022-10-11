@@ -1,52 +1,44 @@
 import random
 
-import prompt
+from brain_games.scripts.main_logic import welcome_user
 
 
-def is_even():
-    print("Welcome to the Brain Games!")
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}")
-    print("Answer 'yes' if the number is even, otherwise answer 'no'.")
-    answer = ["no", "yes"]
-    counter = 0
-    while counter < 3:
-        random_num = random.randint(1, 100)
-        print(f"Question: {random_num}")
-        u = input("Your answer: ").lower()
+def is_even(num):
+    print(f"Question: {num}")
+    if num % 2 == 0:
+        answer = "yes"
+        return answer
+    else:
+        answer = "no"
+        return answer
 
-        if random_num % 2 == 0:
-            even = "yes"
-            if u not in answer:
-                print(f"'{u}' is wrong answer ;(. Correct answer was 'yes'.")
-                print(f"Let's try again, {name}")
-                break
-            if u == even:
-                print("Correct!")
-                counter += 1
-            else:
-                print("'no' is wrong answer ;(. Correct answer was 'yes'.")
-                print(f"Let's try again, {name}")
-                break
-        else:
-            odd = "no"
-            if u not in answer:
-                print(f"'{u}' is wrong answer ;(. Correct answer was 'no'.")
-                print(f"Let's try again, {name}")
-                break
-            if u == odd:
-                print("Correct!")
-                counter += 1
-            else:
-                print("'yes' is wrong answer ;(. Correct answer was 'no'.")
-                print(f"Let's try again, {name}")
-                break
-    if counter == 3:
-        print(f"Congratulations, {name}")
+
+def is_correct(answer, name):
+    u_an = input("Your answer: ")
+    if answer == u_an.lower():
+        print("Correct!")
+        return True
+    else:
+        print(f"'{u_an}' is wrong answer ;(. Correct answer was '{answer}'.")
+        print(f"Let's try again, {name}!")
+        return False
 
 
 def main():
-    is_even()
+    name = welcome_user()
+    count = 0
+    print("'yes' if the number is even, otherwise answer 'no''.")
+    while count < 3:
+        num = random.randint(1, 100)
+        answer = is_even(num)
+        t_or_f = is_correct(answer, name)
+        if t_or_f:
+            count += 1
+        else:
+            break
+
+    if count == 3:
+        print(f"Congratulations, {name}")
 
 
 if __name__ == "__main__":

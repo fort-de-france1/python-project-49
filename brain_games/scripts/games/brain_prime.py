@@ -4,11 +4,9 @@ from brain_games.scripts.main_logic import welcome_user
 
 
 def prime():
-
     k = 0
     a = random.randint(1, 100)
     for i in range(2, a // 2 + 1):
-
 
         if (a % i == 0):
             k = k + 1

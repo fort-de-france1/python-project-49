@@ -2,7 +2,6 @@ from math import gcd
 from brain_games.scripts.main_logic import is_correct, rand_num, welcome_user
 
 
-
 def my_gcd(num):
     print(f"Question: {num[0]} {num[1]}")
     answer_gcd = gcd(num[0], num[1])

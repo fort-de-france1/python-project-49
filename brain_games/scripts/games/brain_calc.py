@@ -1,5 +1,4 @@
 import random
-import prompt
 from brain_games.scripts.main_logic import is_correct, rand_num, welcome_user
 
 
