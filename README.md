@@ -4,3 +4,4 @@
 https://asciinema.org/a/FRVNZQ1gPgtgsoEL4FrAF3MNW - even
 https://asciinema.org/a/PIqNPeoKdKNgeaCi8zwoQqyvV - calc
 https://asciinema.org/a/MsSwb8kapvuN7DGvAFayaIHMv - gcd
+https://asciinema.org/a/AmrGU81rgzqP0jOPwGuBv936Z - progression

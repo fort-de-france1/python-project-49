@@ -1,5 +1,6 @@
 from math import gcd
-from .main_logic import welcome_user, rand_num, is_correct
+from brain_games.scripts.main_logic import is_correct, rand_num, welcome_user
+
 
 
 def my_gcd(num):

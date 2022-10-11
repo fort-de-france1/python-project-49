@@ -1,12 +1,6 @@
 import random
 import prompt
-
-
-def welcome_user():
-    print("Welcome to the Brain Games!")
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}")
-    return name
+from brain_games.scripts.main_logic import is_correct, rand_num, welcome_user
 
 
 def sum(num):
@@ -25,23 +19,6 @@ def multi(num):
     print(f"Question: {num[0]} * {num[1]}")
     answer_multi = num[0] * num[1]
     return answer_multi
-
-
-def rand_num():
-    num1 = random.randint(1, 100)
-    num2 = random.randint(1, 100)
-    return (num1, num2)
-
-
-def is_correct(answer, name):
-    u_an = input("Your answer: ")
-    if answer == int(u_an):
-        print("Correct!")
-        return True
-    else:
-        print(f"'{u_an}' is wrong answer ;(. Correct answer was '{answer}'.")
-        print(f"Let's try again, {name}!")
-        return False
 
 
 def main():
